@@ -1,6 +1,6 @@
 ﻿namespace Fav.FinancialManager.Enum;
 
-public enum TransacrioTypeEnum
+public enum TransactionTypeEnum
 {
     Income,
     Expenses

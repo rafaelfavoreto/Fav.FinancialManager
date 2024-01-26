@@ -1,12 +1,16 @@
-﻿namespace Fav.FinancialManager
+﻿using Fav.FinancialManager.Views;
+
+namespace Fav.FinancialManager
 {
     public partial class App : Application
     {
-        public App()
+        private readonly TransactionList _transactionList;
+        public App(TransactionList transactionList)
         {
+            _transactionList = transactionList;
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(_transactionList);
         }
     }
 }

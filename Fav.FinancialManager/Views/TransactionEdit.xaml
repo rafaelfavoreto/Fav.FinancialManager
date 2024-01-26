@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fav.FinancialManager.Views.TransactionEdit"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout>
+        <Border 
+            BackgroundColor=" Black" 
+            Margin="15" 
+            Padding="15" 
+            StrokeShape="RoundRectangle 30">
+            <Grid RowDefinitions="Auto" ColumnDefinitions="*,30">
+                <Label 
+                    Text="Edit"
+                    TextColor="White"
+                    HorizontalOptions="Center" 
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+                <Image 
+                    HorizontalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Source="close.png"
+                    WidthRequest="17">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </Border>
+        <Grid ColumnDefinitions="*,*" Margin="30,0">
+            <RadioButton Content="Revenue" IsChecked="True" />
+            <RadioButton Content="Expenses" HorizontalOptions="End" Grid.Column="1"/>
+        </Grid>
+        <Entry Placeholder="Nome" Margin="15,0"/>
+        <DatePicker  Margin="15,0"/>
+        <Entry Placeholder="Valor"  Margin="15,0"/>
+        <Button  Margin="15,0" Text="Save" HorizontalOptions="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>
